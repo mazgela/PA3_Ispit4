@@ -6,9 +6,7 @@ and open the template in the editor.
 -->
 <?php 
     function test($a){
-        return "heloooooo ".$a;
-        
-        
+        return "heloooooo ooooo".$a;
     }
     
     
