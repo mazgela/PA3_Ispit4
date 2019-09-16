@@ -1,0 +1,97 @@
+body {
+    font-family: "Lato", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f0ee;
+}
+
+html {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #1d1e22;
+    overflow-x: hidden;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #feda6a;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f0ee;
+}
+
+.main {
+    display: none;
+    font-size: 20px;
+    margin: auto;
+    margin-right: 250px;
+    padding-top: 30px;
+}
+
+.prikaz {
+    width: 70%;
+    margin: auto;
+    word-wrap: break-word;
+}
+
+.obavijestiBox {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #feda6a;
+    margin-right: 250px;
+    padding-bottom: 10px;
+}
+
+.obavijesti {
+    width: 70%;
+    margin: auto;
+    word-wrap: break-word;
+}
+
+h4 {
+    font-weight: normal;
+    margin-block-start: 0.5em;
+    margin-block-end: 0em;
+}
+
+#datetime {
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+@media (max-width: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 25px;
+    }
+    .prikaz {
+        width: 100%;
+    }
+    .obavijesti {
+        width: 100%;
+    }
+    #datetime {
+        width: 100%;
+        margin: 0px;
+    }
+}
