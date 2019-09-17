@@ -4,14 +4,6 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php 
-    function test($a){
-        return "heloooooo ooooo".$a;
-    }
-    
-    
-    
-?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -25,11 +17,14 @@ and open the template in the editor.
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </head>
     <body>
+        <?php
+            $val1 = $val2 = 0;
+        ?>
         <div class="sidenav">
             <div style="margin-top:20px;">
-                <a href="#">DijagonalaJS</a>
-                <a href="#">Obavijest</a>
-                <a href="#">DijagonalaPHP</a>
+                <a id="PJSNav" href="#">PovrsinaJS</a>
+                <a id="OBNav" href="#">Obavijest</a>
+                <a id="PPHPNav" href="#">PovrsinaPHP</a>
                 <a href="#">Baza</a>
             </div>
             
@@ -39,9 +34,33 @@ and open the template in the editor.
             <div class="prikaz">
                 <h2>Ispit 30.08.2019.</h2>
                 <p>Ovo je vježba za dekanski rok. Za sad je riješen samo 2.zadatak, ali u cijelosti. Nadam se da ću nešto i zapamtiti i naučiti, ako ništa barem kako pravilno kopirati pronađene stvari haha.</p>
-              <?php 
-               echo test('martina');
-              ?>
+                
+            </div>
+            <div id="PJS" class="slider">
+                <div id="slider1" ></div>
+                <p id="value1" class="border">&nbsp;</p>
+                <div id="slider2" ></div>
+                <p id="value2" class="border">&nbsp;</p>
+                <input id="result" type="number" disabled placeholder="Rezultat"/>
+            </div>
+            
+            <div id="PPHP" class="slider">
+                <form method="post" action="<?php $_SERVER["PHP_SELF"]?>">  
+                    <input type="range" min="0" max="200" name="val1" value="<?php echo $val1;?>">
+                    <span> <?php echo $val1;?></span>
+                    <br>
+                    <input type="range" min="0" max="200" name="val2" value="<?php echo $val2;?>">
+                    <span> <?php echo $val2;?></span>
+                    <br>
+                    <input type="submit" name="submit" value="Submit">  
+                  </form>
+                <?php
+                    echo $val1;
+                ?>
+            </div>
+            
+            <div id="OB" class="slider">
+                <div id="obavjest" >klikni me!</div>
             </div>
         </div>
 
@@ -51,5 +70,8 @@ and open the template in the editor.
             </div>
             <span id="datetime"></span>
         </div>
+        
+        
+        <?php include 'funkcije.php';?>
     </body>
 </html>
