@@ -32,9 +32,6 @@ and open the template in the editor.
 
         <div class="main">
             <div class="prikaz">
-                <h2>Ispit 30.08.2019.</h2>
-                <p>Ovo je vježba za dekanski rok. Za sad je riješen samo 2.zadatak, ali u cijelosti. Nadam se da ću nešto i zapamtiti i naučiti, ako ništa barem kako pravilno kopirati pronađene stvari haha.</p>
-                
             </div>
             <div id="PJS" class="slider">
                 <div id="slider1" ></div>
